@@ -1,0 +1,237 @@
+html {
+    background-color: rgb(244, 244, 238);
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0 1.2rem;
+}
+
+hr {
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+::placeholder {
+    color: rgb(185, 185, 165);
+    font-size: 1rem;
+}
+
+.heading {
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 0;
+    margin-top: 1.6rem;
+}
+
+.header .avatar img {
+    border-radius: 50%;
+    max-width: 75px;
+    min-width: 50px;
+}
+
+.chat .avatar img {
+    border-radius: 50%;
+    max-width: 40px;
+    min-width: 25px;
+}
+
+.chat p {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgb(180, 180, 180);
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+    color: rgb(180, 180, 180);
+}
+
+.chat p span {
+    background-color: rgb(244, 244, 238);
+    padding: 0 10px;
+}
+
+.header span {
+    font-size: 1.4rem;
+    font-weight: bolder;
+}
+
+.chatBox {
+    overflow-y: scroll;
+    scrollbar-width: none;
+    padding: 1rem 0;
+}
+
+.chatDiv {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.chatBox::-webkit-scrollbar {
+    display: none;
+}
+
+.chats {
+    width: 90%;
+    float: left;
+    clear: both;
+    margin: 0px 0 20px;
+}
+
+.myChats {
+    width: 90%;
+    float: right;
+    clear: both;
+    margin: 0px;
+}
+
+.chatText {
+    border-radius: 0 10px 10px 10px;
+    background-color: white;
+    padding: 7px;
+    font-size: 0.9rem;
+    box-shadow: 0 0 10px rgb(206, 206, 206);
+}
+
+.myChatText {
+    border-radius: 10px 10px 0 10px;
+    background-color: rgba(0, 0, 255, 0.682);
+    padding: 7px;
+    color: white;
+    font-size: 0.9rem;
+    box-shadow: 0 0 10px rgb(160, 160, 188);
+}
+
+.inputBox {
+    text-align: center;
+    margin: .5rem .5rem 3rem;
+    background-color: white;
+    border-radius: 5px;
+    color: rgb(88, 88, 76);
+}
+
+input {
+
+    width: 90%;
+    height: 2.5rem;
+    border: none;
+    font-size: 1.2rem;
+    outline: none;
+    padding: 5px 10px;
+}
+
+.attachmentIcons {
+    background-color: #098809e0;
+    border-radius: 30px;
+    width: 8.5rem;
+    font-weight: bolder;
+    height: 3rem;
+    color: white;
+    position: absolute;
+    bottom: 131px;
+    right: 40px;
+    z-index: 1;
+}
+
+.dialogueBox {
+    width: 0.6rem;
+    height: 0.6rem;
+    transform: rotate(45deg);
+    background-color: #098809;
+    position: absolute;
+    bottom: 127px;
+    right: 105px;
+    z-index: 1;
+}
+
+@media (min-width: 400px) {
+    .chat p {
+        width: 330px;
+        margin: 10px auto 20px;
+    }
+}
+
+@media (min-width: 600px) {
+
+    .chats,
+    .myChats {
+        width: 475px;
+    }
+
+    body {
+        width: 550px;
+        margin: auto;
+    }
+}
+
+@media (min-width: 700px) {
+    body {
+        width: 650px;
+        margin: auto;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .chatText,
+    .myChatText {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .header p {
+        font-size: 1.1rem;
+    }
+
+    .header span {
+        font-size: 1.3rem;
+    }
+
+    .header .avatar img {
+        border-radius: 50%;
+        max-width: 60px;
+        min-width: 40px;
+    }
+}
+
+@media (max-width: 350px) {
+    .header p {
+        font-size: 1rem;
+    }
+
+    .header span {
+        font-size: 1.2rem;
+    }
+
+    .header .avatar img {
+        border-radius: 50%;
+        max-width: 45px;
+        min-width: 30px;
+    }
+
+    .chatText,
+    .myChatText {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 300px) {
+    .header p {
+        font-size: 0.8rem;
+    }
+
+    .header span {
+        font-size: 1rem;
+    }
+
+    .header .avatar img {
+        border-radius: 50%;
+        max-width: 30px;
+        min-width: 20px;
+    }
+
+    .chatText,
+    .myChatText {
+        font-size: 0.6rem;
+    }
+}
