@@ -58,7 +58,6 @@ hr {
 .chatBox {
     overflow-y: scroll;
     scrollbar-width: none;
-    padding: 1rem 0;
 }
 
 .chatDiv {
@@ -81,7 +80,7 @@ hr {
     width: 90%;
     float: right;
     clear: both;
-    margin: 0px;
+    margin: 0px 0px 20px;
 }
 
 .chatText {
