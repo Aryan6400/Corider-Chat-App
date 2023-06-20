@@ -15,7 +15,7 @@ function App() {
 
   async function getChats() {
     try {
-      const data = await database.getData(`https://qa.corider.in/assignment/chat?page=${pageNumber}`)
+      const data = await database.getData("https://mocki.io/v1/dec7f97b-da06-4308-aed1-b186e6b2d433")
       const newChats = data.chats;
       setMode("Online");
       setChats((prevChats) => {
@@ -26,7 +26,7 @@ function App() {
     } catch (err) {
       let localChats: any = localStorage.getItem("chats");
       localChats = JSON.parse(localChats!);
-      localChats.result.chats==null ? setChats([]) : setChats(localChats.result.chats);
+      localChats.result.chats == null ? setChats([]) : setChats(localChats.result.chats);
       setMode("Offline");
     }
   }
@@ -55,6 +55,12 @@ function App() {
     setTimeout(() => {
       setChatsLoaded(true);
     }, 2000);
+  }, [pageNumber]);
+
+  useEffect(() => {
+    if (chatRef.current) {
+      chatRef.current.scrollTop = 200;
+    }
   }, [pageNumber]);
 
   useEffect(() => {
@@ -92,7 +98,7 @@ function App() {
                 }
 
                 return (
-                  <Chat key={chat.id} showDateLine={dateChange} date={date} isLast={index == (chats.length-1) ? true : false} user={index == 0 ? true : false} content={chat.message} profile={chat.sender.image} />
+                  <Chat key={chat.id} showDateLine={dateChange} date={date} isLast={index == (chats.length - 1) ? true : false} user={index%5 == 0 ? true : false} content={chat.message} profile={chat.sender.image} />
                 )
               })
             }
